@@ -145,3 +145,14 @@ $(document).ready(function() {
   $('#wrap').css('margin-top', $menuHeight + 'px');
   
 }); //End of $(document).ready();
+
+
+
+$("input, textarea").live("focus", function(e) {
+  var inputTop = $('#main-menu').position();
+  window.scrollTo(inputTop.left, inputTop.top);
+});
+
+$("input, textarea").live("blur", function(e) {
+    console.log("False");
+});
